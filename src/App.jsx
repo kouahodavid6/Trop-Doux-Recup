@@ -1,7 +1,5 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-// import { useEffect } from "react";
-
-import Home from "./Pages/Home/Home";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home/Home"
 import AppToaster from "./components/AppToaster"
 import NotFound from "./components/NotFound";
 
@@ -14,12 +12,10 @@ function App() {
 
         <main>
           <Routes>
-            {/* Routes publiques */}
-            <Route
-              path="/"
-              element={ <Home /> }
-            />
-
+            {/* Route publique principale */}
+            <Route path="/" element={<Home />} />
+            
+            {/* Page 404 pour toutes les autres routes */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
