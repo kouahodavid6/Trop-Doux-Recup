@@ -14,7 +14,7 @@ function App() {
           <Routes>
             {/* Route publique principale */}
             <Route path="/" element={<Home />} />
-            
+
             {/* Page 404 pour toutes les autres routes */}
             <Route path="*" element={<NotFound />} />
           </Routes>
