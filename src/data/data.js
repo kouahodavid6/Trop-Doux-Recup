@@ -58,13 +58,13 @@ export const stats = [
         icon: Store,
         value: '350+',
         label: 'restaurants partenaires',
-        color: 'from-black to-gray-800',
+        color: 'from-[#ffa700] to-[#ff8c00]',
     },
     {
         icon: Scale,
         value: '2,500',
         label: 'tonnes de nourriture sauvées',
-        color: 'from-[#ffa700] to-[#ff8c00]',
+        color: 'from-black to-gray-800',
     },
     {
         icon: Heart,
@@ -74,9 +74,37 @@ export const stats = [
     },
 ];
 
+export const testimonials = [
+    {
+        name: 'David Kouaho',
+        role: 'Cliente fidèle',
+        text: 'Je commande sur l\'application tous les soirs pour une fraction du prix. C\'est incroyable et délicieux !',
+        rating: 5,
+        bgColor: 'bg-gradient-to-br from-[#ffa700] to-[#ff8c00]',
+        textColor: 'text-black',
+    },
+    {
+        name: 'Judicael Cakpo',
+        role: 'Propriétaire Restaurant Le Jardin',
+        text: 'Nous avons réduit notre gaspillage de 45% tout en générant des revenus supplémentaires. Excellent concept !',
+        rating: 5,
+        bgColor: 'bg-gradient-to-br from-black to-gray-900',
+        textColor: 'text-white',
+    },
+    {
+        name: 'Emmanuel Bamidélé',
+        role: 'Étudiant',
+        text: 'Parfait pour mon budget ! Je découvre de nouveaux restaurants et je contribue à réduire le gaspillage.',
+        rating: 5,
+        bgColor: 'bg-gradient-to-br from-[#ff8c00] to-[#ffa700]',
+        textColor: 'text-black',
+    },
+];
+
 export default {
     steps,
     restaurantData,
     clientData,
-    stats
+    stats,
+    testimonials
 };

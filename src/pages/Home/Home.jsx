@@ -3,6 +3,7 @@ import Urgence from "./components/Urgence";
 import Fonctionnement from "./components/Fonctionnement";
 import Rejoindres from "./components/Rejoindres";
 import Impact from "./components/Impact";
+import Temoignages from "./components/Temoignages";
 
 const Home = () => {
     return(
@@ -12,6 +13,7 @@ const Home = () => {
             <Fonctionnement />
             <Rejoindres />
             <Impact />
+            <Temoignages />
         </>
     );
 }
