@@ -1,9 +1,9 @@
-import steps from "../../../data/data";
+import { steps } from '../../../data/data';
 
 const Fonctionnement = () => {
     return(
         <section>
-            <div className="container mx-auto px-4 my-16">
+            <div className="container mx-auto px-4">
                 <h2 className="text-4xl md:text-5xl font-black text-center mb-16 text-black">
                     Comment ça <span className="text-[#ffa700]">fonctionne</span> ?
                 </h2>

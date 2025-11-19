@@ -1,6 +1,7 @@
 import Hero from "./components/Hero";
 import Urgence from "./components/Urgence";
 import Fonctionnement from "./components/Fonctionnement";
+import Rejoindres from "./components/Rejoindres";
 
 const Home = () => {
     return(
@@ -8,6 +9,7 @@ const Home = () => {
             <Hero />
             <Urgence />
             <Fonctionnement />
+            <Rejoindres />
         </>
     );
 }
