@@ -106,9 +106,20 @@ const Footer = () => {
 
                 <div className="border-t border-gray-800 pt-8">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-                        <p className="text-gray-400 text-center md:text-left">
-                            © 2024 Trop Doux Recup. Tous droits réservés.
-                        </p>
+                        <div>
+                            <p className='text-gray-400 text-center md:text-left'>
+                                Dev par :{' '}
+                                <span 
+                                    className='underline hover:text-[#ffa700] cursor-pointer'
+                                    onClick={() => window.open('', '_blank')}
+                                >
+                                    JEED-TECH
+                                </span>
+                            </p>
+                            <p className="text-gray-400 text-center md:text-left">
+                                © 2024 Trop Doux Recup. Tous droits réservés.
+                            </p>
+                        </div>
 
                         <div className="flex gap-3">
                             <ButtonStore 
