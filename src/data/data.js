@@ -1,4 +1,4 @@
-import { Upload, ShoppingBag, Check, Store, Users, DollarSign, UserPlus, TrendingDown, Sparkles, Leaf, Clock } from 'lucide-react';
+import { Upload, ShoppingBag, Check, Store, Users, DollarSign, UserPlus, TrendingDown, Leaf, Clock } from 'lucide-react';
 
 // Données pour le composant Fonctionnement
 export const steps = [
@@ -30,8 +30,7 @@ export const restaurantData = {
     items: [
         { icon: DollarSign, text: 'Transformez vos invendus en revenus' },
         { icon: UserPlus, text: 'Attirez de nouveaux clients' },
-        { icon: TrendingDown, text: 'Réduisez vos coûts de gaspillage' },
-        { icon: Sparkles, text: 'Communiquez votre engagement éco' }
+        { icon: TrendingDown, text: 'Réduisez vos coûts de gaspillage' }
     ],
     statValue: '-40%',
     statText: 'de nourriture jetée',
@@ -45,11 +44,10 @@ export const clientData = {
     icon: Users,
     items: [
         { icon: DollarSign, text: 'Repas qualité restaurant à -60%' },
-        { icon: Sparkles, text: 'Découverte de nouvelles cuisines' },
         { icon: Leaf, text: 'Impact écologique immédiat' },
         { icon: Clock, text: 'Réservation express' }
     ],
-    statValue: 'Jusqu\'à 20€',
+    statValue: 'Jusqu\'à 40%',
     statText: 'd\'économie par repas',
     buttonText: 'Devenir client',
     onButtonClick: () => console.log('Devenir client')
