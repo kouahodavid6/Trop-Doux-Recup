@@ -51,7 +51,7 @@ const Hero = () => {
                                     <div className="relative group">
                                         <div className="absolute inset-0 bg-[#ffa700] rounded-2xl blur-lg group-hover:blur-xl transition-all duration-500 opacity-50"></div>
                                         <img 
-                                            src="/src/assets/images/LogoTropDouxRecup.jpg" 
+                                            src="/LogoTropDouxRecup.jpg" 
                                             alt="Logo Trop Doux Recup"
                                             className="relative w-40 h-40 sm:w-48 sm:h-48 rounded-2xl object-cover transform group-hover:scale-105 transition-transform duration-500 shadow-2xl"
                                         />

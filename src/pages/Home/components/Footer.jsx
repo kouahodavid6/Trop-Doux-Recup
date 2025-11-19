@@ -8,7 +8,7 @@ const Footer = () => {
                     <div>
                         <div className="flex items-center justify-content-center gap-4 mb-4">
                             <img 
-                                src="/src/assets/images/LogoTropDouxRecup.jpg" 
+                                src="/LogoTropDouxRecup.jpg" 
                                 alt="Logo Trop Doux Recup"
                                 className="relative w-20 h-20 rounded-2xl object-cover transform group-hover:scale-105 transition-transform duration-500 shadow-2xl"
                             />
