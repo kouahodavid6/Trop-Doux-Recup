@@ -11,15 +11,15 @@ const CardRejoindre = ({
   const isRestaurant = type === 'restaurant';
   
   const containerClasses = `
-    rounded-3xl p-10 shadow-2xl transition-all duration-300 transform hover:scale-105
+    rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 shadow-xl sm:shadow-2xl transition-all duration-300 transform hover:scale-105
     ${isRestaurant 
-      ? 'bg-gradient-to-br from-black to-gray-900 border-4 border-[#ffa700] shadow-[#ffa700]/30 hover:shadow-[#ffa700]/50' 
-      : 'bg-gradient-to-br from-[#ffa700] to-[#ff8c00] hover:shadow-3xl'
+      ? 'bg-gradient-to-br from-black to-gray-900 border-2 sm:border-4 border-[#ffa700] shadow-[#ffa700]/20 sm:shadow-[#ffa700]/30 hover:shadow-[#ffa700]/40' 
+      : 'bg-gradient-to-br from-[#ffa700] to-[#ff8c00] hover:shadow-2xl sm:hover:shadow-3xl'
     }
   `;
 
   const iconContainerClasses = `
-    p-4 rounded-2xl
+    p-3 sm:p-4 rounded-xl sm:rounded-2xl
     ${isRestaurant ? 'bg-[#ffa700]' : 'bg-black'}
   `;
 
@@ -29,9 +29,9 @@ const CardRejoindre = ({
   const itemIconColor = isRestaurant ? 'text-[#ffa700]' : 'text-black';
 
   const statContainerClasses = `
-    rounded-2xl p-6 mb-8
+    rounded-xl sm:rounded-2xl p-4 sm:p-6 mb-6 sm:mb-8
     ${isRestaurant 
-      ? 'bg-[#ffa700]/20 border-2 border-[#ffa700]' 
+      ? 'bg-[#ffa700]/20 border border-[#ffa700]' 
       : 'bg-black'
     }
   `;
@@ -40,33 +40,29 @@ const CardRejoindre = ({
   const statTextColor = isRestaurant ? 'text-white' : 'text-white';
 
   const buttonClasses = `
-    w-full py-4 rounded-full text-xl font-black transition-all duration-300 transform hover:scale-105
+    w-full py-3 sm:py-4 rounded-full text-lg sm:text-xl font-black transition-all duration-300 transform hover:scale-105
     ${isRestaurant 
-      ? 'bg-[#ffa700] text-black hover:bg-[#ff9500] shadow-xl shadow-[#ffa700]/50' 
-      : 'bg-black text-[#ffa700] hover:bg-gray-900 shadow-xl'
+      ? 'bg-[#ffa700] text-black hover:bg-[#ff9500] shadow-lg sm:shadow-xl shadow-[#ffa700]/40' 
+      : 'bg-black text-[#ffa700] hover:bg-gray-900 shadow-lg sm:shadow-xl'
     }
   `;
 
-  // Debug: Vérifier ce qui est reçu
-  console.log('Icon reçu:', Icon);
-  console.log('Items reçus:', items);
-
   return (
     <div className={containerClasses}>
-      <div className="flex items-center gap-4 mb-8">
+      <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
         <div className={iconContainerClasses}>
-          {Icon && <Icon className={`w-10 h-10 ${iconColor}`} />}
+          {Icon && <Icon className={`w-8 h-8 sm:w-10 sm:h-10 ${iconColor}`} />}
         </div>
-        <h3 className={`text-3xl font-black ${titleColor}`}>
+        <h3 className={`text-xl sm:text-2xl lg:text-3xl font-black ${titleColor} leading-tight`}>
           {title}
         </h3>
       </div>
 
-      <ul className="space-y-5 mb-10">
+      <ul className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
         {items.map((item, index) => (
-          <li key={index} className="flex items-start gap-3">
-            {item.icon && <item.icon className={`w-6 h-6 ${itemIconColor} flex-shrink-0 mt-1`} />}
-            <span className={`text-lg ${textColor} ${!isRestaurant ? 'font-semibold' : ''}`}>
+          <li key={index} className="flex items-start gap-2 sm:gap-3">
+            {item.icon && <item.icon className={`w-5 h-5 sm:w-6 sm:h-6 ${itemIconColor} flex-shrink-0 mt-0.5 sm:mt-1`} />}
+            <span className={`text-sm sm:text-base lg:text-lg ${textColor} ${!isRestaurant ? 'font-semibold' : ''} leading-relaxed`}>
               {item.text}
             </span>
           </li>
@@ -74,10 +70,10 @@ const CardRejoindre = ({
       </ul>
 
       <div className={statContainerClasses}>
-        <p className={`text-4xl font-black text-center ${statValueColor}`}>
+        <p className={`text-2xl sm:text-3xl lg:text-4xl font-black text-center ${statValueColor}`}>
           {statValue}
         </p>
-        <p className={`text-center text-lg mt-2 ${statTextColor}`}>
+        <p className={`text-center text-base sm:text-lg mt-1 sm:mt-2 ${statTextColor}`}>
           {statText}
         </p>
       </div>
