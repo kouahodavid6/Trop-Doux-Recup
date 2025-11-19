@@ -5,6 +5,7 @@ import Rejoindres from "./components/Rejoindres";
 import Impact from "./components/Impact";
 import Temoignages from "./components/Temoignages";
 import FAQ from "./components/FAQ";
+import Footer from "./components/Footer";
 
 const Home = () => {
     return(
@@ -16,6 +17,7 @@ const Home = () => {
             <Impact />
             <Temoignages />
             <FAQ />
+            <Footer />
         </>
     );
 }

@@ -4,7 +4,7 @@ const Hero = () => {
     return(
         <header className="relative bg-black text-white min-h-screen flex items-center overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-black via-black to-[#ffa700]/20"></div>
-            
+
             <div className="container mx-auto px-4 py-20 relative z-10 w-full">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     {/* Partie texte - centrée sur mobile */}
