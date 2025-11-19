@@ -1,18 +1,29 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home/Home"
+import Home from "./pages/Home/Home";
 import NotFound from "./components/NotFound";
+import { useEffect } from "react";
+
+// Import AOS
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: false,
+      mirror: true,
+      offset: 100
+    });
+  }, []);
 
   return (
     <Router>
       <div className="min-h-screen bg-gray-50">
         <main>
           <Routes>
-            {/* Route publique principale */}
             <Route path="/" element={<Home />} />
-
-            {/* Page 404 pour toutes les autres routes */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

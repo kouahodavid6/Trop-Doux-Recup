@@ -10,13 +10,30 @@ import Footer from "./components/Footer";
 const Home = () => {
     return(
         <>
-            <Hero />
-            <Urgence />
-            <Fonctionnement />
-            <Rejoindres />
-            <Impact />
-            <Temoignages />
-            <FAQ />
+            {/* Animation d'apparition initiale pour Hero */}
+            <div data-aos="fade-in" data-aos-duration="1200">
+                <Hero />
+            </div>
+
+            {/* Animations au scroll pour les autres sections */}
+            <div data-aos="fade-up" data-aos-delay="100">
+                <Urgence />
+            </div>
+            <div data-aos="fade-up" data-aos-delay="100">
+                <Fonctionnement />
+            </div>
+            <div data-aos="fade-up" data-aos-delay="100">
+                <Rejoindres />
+            </div>
+            <div data-aos="fade-up" data-aos-delay="100">
+                <Impact />
+            </div>
+            <div data-aos="fade-up" data-aos-delay="100">
+                <Temoignages />
+            </div>
+            <div data-aos="fade-up" data-aos-delay="100">
+                <FAQ />
+            </div>
             <Footer />
         </>
     );
