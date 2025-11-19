@@ -1,4 +1,5 @@
-import { Smartphone, Mail, MapPin, Facebook, Instagram, Twitter } from 'lucide-react';
+import { Mail, MapPin, Facebook, Instagram, Twitter } from 'lucide-react';
+import ButtonStore from '../../components/ButtonStore';
 
 const Footer = () => {
     return (
@@ -109,21 +110,17 @@ const Footer = () => {
                             © 2024 Trop Doux Recup. Tous droits réservés.
                         </p>
 
-                        <div className="flex gap-4">
-                            <button 
-                                onClick={() => window.open('https://apps.apple.com/app/id389801252', '_blank')}
-                                className="flex items-center justify-center gap-2 bg-[#ffa700] text-black px-6 py-3 rounded-full font-bold hover:bg-[#ff9500] transition-all duration-300 transform hover:scale-105 w-full sm:w-auto"
-                            >
-                                <Smartphone className="w-5 h-5" />
-                                App Store
-                            </button>
-                            <button 
-                                onClick={() => window.open('https://play.google.com/store/apps/details?id=com.instagram.android', '_blank')}
-                                className="flex items-center justify-center gap-2 bg-[#ffa700] text-black px-6 py-3 rounded-full font-bold hover:bg-[#ff9500] transition-all duration-300 transform hover:scale-105 w-full sm:w-auto"
-                            >
-                                <Smartphone className="w-5 h-5" />
-                                Google Play
-                            </button>
+                        <div className="flex gap-3">
+                            <ButtonStore 
+                                store="App Store"
+                                url="https://apps.apple.com/app/id389801252"
+                                className="text-xs md:text-lg px-10"
+                            />
+                            <ButtonStore 
+                                store="Google Play"
+                                url="https://play.google.com/store/apps/details?id=com.instagram.android"
+                                className="text-xs md:text-lg px-10"
+                            />
                         </div>
                     </div>
                 </div>
