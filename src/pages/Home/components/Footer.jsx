@@ -6,9 +6,14 @@ const Footer = () => {
             <div className="container mx-auto px-4">
                 <div className="grid md:grid-cols-4 gap-12 mb-12">
                     <div>
-                        <h3 className="text-2xl font-black text-[#ffa700] mb-6">
-                            Trop Doux Recup
-                        </h3>
+                        <div className="flex items-center justify-content-center gap-4 mb-4">
+                            <img 
+                                src="/src/assets/images/LogoTropDouxRecup.jpg" 
+                                alt="Logo Trop Doux Recup"
+                                className="relative w-20 h-20 rounded-2xl object-cover transform group-hover:scale-105 transition-transform duration-500 shadow-2xl"
+                            />
+                            <h1 className='text-xl font-bold text-[#ffa700]'>Trop Doux Recup</h1>
+                        </div>
                         <p className="text-gray-400 leading-relaxed mb-6">
                             L'application anti-gaspillage qui connecte restaurants et clients pour des repas pas chers.
                         </p>
@@ -42,12 +47,12 @@ const Footer = () => {
                             </li>
                             <li>
                                 <a href="#" className="text-gray-400 hover:text-[#ffa700] transition-colors duration-300">
-                                    Pour les restaurants
+                                    Nous rejoindre
                                 </a>
                             </li>
                             <li>
                                 <a href="#" className="text-gray-400 hover:text-[#ffa700] transition-colors duration-300">
-                                    Pour les clients
+                                    Impact
                                 </a>
                             </li>
                         </ul>
