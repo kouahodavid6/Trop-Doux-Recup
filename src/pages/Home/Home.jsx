@@ -4,6 +4,7 @@ import Fonctionnement from "./components/Fonctionnement";
 import Rejoindres from "./components/Rejoindres";
 import Impact from "./components/Impact";
 import Temoignages from "./components/Temoignages";
+import FAQ from "./components/FAQ";
 
 const Home = () => {
     return(
@@ -14,6 +15,7 @@ const Home = () => {
             <Rejoindres />
             <Impact />
             <Temoignages />
+            <FAQ />
         </>
     );
 }

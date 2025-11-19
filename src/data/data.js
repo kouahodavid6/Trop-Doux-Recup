@@ -101,10 +101,34 @@ export const testimonials = [
     },
 ];
 
+export const faqs = [
+    {
+        question: 'Comment fonctionne la récupération des repas ?',
+        answer: 'Après avoir réservé via l\'application, vous recevez un créneau de récupération. Présentez-vous au restaurant avec votre confirmation et récupérez votre repas emballé et prêt à emporter.',
+    },
+    {
+            question: 'Quelle est la réduction moyenne sur les repas ?',
+            answer: 'Les réductions varient généralement entre 50% et 70% du prix initial. Certaines offres peuvent atteindre jusqu\'à 20€ d\'économie par repas selon le restaurant et le type de plat.',
+    },
+    {
+        question: 'Les restaurants doivent-ils payer pour s\'inscrire ?',
+        answer: 'Non, l\'inscription est gratuite pour les restaurants. Nous prenons uniquement une petite commission sur chaque vente réalisée via l\'application.',
+    },
+    {
+        question: 'Comment puis-je payer mes commandes ?',
+        answer: 'Le paiement se fait directement dans l\'application via carte bancaire ou Apple Pay/Google Pay. C\'est sécurisé, rapide et sans contact au moment de la récupération.',
+    },
+    {
+        question: 'Quels types de plats sont disponibles ?',
+        answer: 'Vous trouverez une grande variété : plats du jour, pâtisseries, sandwiches, plats végétariens, cuisines du monde... Tout dépend des invendus disponibles chaque soir dans les restaurants partenaires.',
+    },
+];
+
 export default {
     steps,
     restaurantData,
     clientData,
     stats,
-    testimonials
+    testimonials,
+    faqs
 };
