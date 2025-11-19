@@ -1,4 +1,4 @@
-import { Upload, ShoppingBag, Check, Store, Users, DollarSign, UserPlus, TrendingDown, Leaf, Clock } from 'lucide-react';
+import { Upload, ShoppingBag, Check, Store, Users, DollarSign, UserPlus, TrendingDown, Leaf, Clock, Scale, Heart } from 'lucide-react';
 
 // Données pour le composant Fonctionnement
 export const steps = [
@@ -53,8 +53,30 @@ export const clientData = {
     onButtonClick: () => console.log('Devenir client')
 };
 
+export const stats = [
+    {
+        icon: Scale,
+        value: '2,500',
+        label: 'tonnes de nourriture sauvées',
+        color: 'from-[#ffa700] to-[#ff8c00]',
+    },
+    {
+        icon: Store,
+        value: '350+',
+        label: 'restaurants partenaires',
+        color: 'from-black to-gray-800',
+    },
+    {
+        icon: Heart,
+        value: '15,000+',
+        label: 'clients satisfaits',
+        color: 'from-[#ff8c00] to-[#ffa700]',
+    },
+];
+
 export default {
     steps,
     restaurantData,
-    clientData
+    clientData,
+    stats
 };
