@@ -55,16 +55,16 @@ export const clientData = {
 
 export const stats = [
     {
-        icon: Scale,
-        value: '2,500',
-        label: 'tonnes de nourriture sauvées',
-        color: 'from-[#ffa700] to-[#ff8c00]',
-    },
-    {
         icon: Store,
         value: '350+',
         label: 'restaurants partenaires',
         color: 'from-black to-gray-800',
+    },
+    {
+        icon: Scale,
+        value: '2,500',
+        label: 'tonnes de nourriture sauvées',
+        color: 'from-[#ffa700] to-[#ff8c00]',
     },
     {
         icon: Heart,
