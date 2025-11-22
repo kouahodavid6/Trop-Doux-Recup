@@ -111,7 +111,7 @@ const Footer = () => {
                                 Dev par :{' '}
                                 <span 
                                     className='underline hover:text-[#ffa700] cursor-pointer'
-                                    onClick={() => window.open('', '_blank')}
+                                    onClick={() => window.open('https://devs-trop-doux-recup.vercel.app/', '_blank')}
                                 >
                                     JEED-TECH
                                 </span>
