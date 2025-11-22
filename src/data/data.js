@@ -77,7 +77,7 @@ export const stats = [
 export const testimonials = [
     {
         name: 'David Kouaho',
-        role: 'Client fidèl',
+        role: 'Client fidèle',
         text: 'Je commande sur l\'application tous les soirs pour une fraction du prix. C\'est incroyable !',
         rating: 5,
         bgColor: 'bg-gradient-to-br from-[#ffa700] to-[#ff8c00]',
