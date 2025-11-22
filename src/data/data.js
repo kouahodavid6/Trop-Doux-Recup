@@ -58,19 +58,19 @@ export const stats = [
         icon: Store,
         value: '350+',
         label: 'restaurants partenaires',
-        color: 'from-[#ffa700] to-[#ff8c00]',
+        color: 'from-black to-gray-800',
     },
     {
         icon: Scale,
         value: '2,500',
         label: 'tonnes de nourriture sauvées',
-        color: 'from-black to-gray-800',
+        color: 'from-[#ff8c00] to-[#ffa700]',
     },
     {
         icon: Heart,
         value: '15,000+',
         label: 'clients satisfaits',
-        color: 'from-[#ff8c00] to-[#ffa700]',
+        color: 'from-black to-gray-800',
     },
 ];
 
