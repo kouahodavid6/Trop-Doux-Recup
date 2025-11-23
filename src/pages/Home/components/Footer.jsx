@@ -110,7 +110,7 @@ const Footer = () => {
                             <p className='text-gray-400 text-center md:text-left'>
                                 Dev par :{' '}
                                 <span 
-                                    className='underline hover:text-[#ffa700] cursor-pointer'
+                                    className='underline text-[#ffa700] cursor-pointer'
                                     onClick={() => window.open('https://devs-trop-doux-recup.vercel.app/', '_blank')}
                                 >
                                     Équipe Devs
