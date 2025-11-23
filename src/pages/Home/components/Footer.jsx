@@ -13,7 +13,7 @@ const Footer = () => {
                                 alt="Logo Trop Doux Recup"
                                 className="relative w-20 h-20 rounded-2xl object-cover transform group-hover:scale-105 transition-transform duration-500 shadow-2xl"
                             />
-                            <h1 className='text-xl font-bold text-[#ffa700]'>Trop Doux Recup</h1>
+                            <h1 className='text-xl font-bold text-[#ffa700]'>Trop Doux Récup</h1>
                         </div>
                         <p className="text-gray-400 leading-relaxed mb-6">
                             L'application anti-gaspillage qui connecte restaurants et clients pour des repas pas chers.
