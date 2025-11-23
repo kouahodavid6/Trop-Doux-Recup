@@ -20,7 +20,7 @@ const Urgence = () => {
                         <div className="flex flex-col items-center justify-center gap-4 mb-4">
                             <CheckCircle className="w-12 h-12" />
                             <h3 className="text-3xl md:text-4xl font-black">
-                                Trop Doux Recup : la solution gagnant-gagnant
+                                Trop Doux Récup : la solution gagnant-gagnant
                             </h3>
                         </div>
                         <p className="text-xl font-semibold">

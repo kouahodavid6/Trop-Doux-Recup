@@ -117,7 +117,7 @@ const Footer = () => {
                                 </span>
                             </p>
                             <p className="text-gray-400 text-center md:text-left">
-                                © 2024 Trop Doux Recup. Tous droits réservés.
+                                © 2024 Trop Doux Récup. Tous droits réservés.
                             </p>
                         </div>
 

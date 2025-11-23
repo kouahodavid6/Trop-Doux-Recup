@@ -54,7 +54,7 @@ const Hero = () => {
                                     {/* Texte sous le logo */}
                                     <div className="text-center space-y-3">
                                         <h3 className="text-xl sm:text-2xl font-bold text-white">
-                                            Trop Doux Recup
+                                            Trop Doux Récup
                                         </h3>
                                         <p className="text-gray-400 text-sm max-w-xs">
                                             Des repas délicieux à petits prix, 
