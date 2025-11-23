@@ -113,7 +113,7 @@ const Footer = () => {
                                     className='underline hover:text-[#ffa700] cursor-pointer'
                                     onClick={() => window.open('https://devs-trop-doux-recup.vercel.app/', '_blank')}
                                 >
-                                    JEED-TECH
+                                    Équipe Devs
                                 </span>
                             </p>
                             <p className="text-gray-400 text-center md:text-left">
