@@ -56,7 +56,7 @@ const NotFound = () => {
                     transition={{ delay: 0.8 }}
                 >
                     Oups ! Il semble que cette recette ait été dégustée ou n'existe plus. 
-                    Revenons à Trop Doux Recup ensemble.
+                    Revenons à TropDouxRécup ensemble.
                 </motion.p>
 
                 {/* Bouton de retour */}
@@ -83,7 +83,7 @@ const NotFound = () => {
                 >
                     <img 
                         src="/LogoTropDouxRecupBlack.jpg" 
-                        alt="Trop Doux Recup" 
+                        alt="TropDouxRécup" 
                         className="h-6 w-6 rounded-full object-cover"
                     />
                     Revenez vers nous !
@@ -120,7 +120,7 @@ const NotFound = () => {
             <div className="absolute bottom-10 right-20 opacity-10">
                 <img 
                     src="/LogoTropDouxRecup.jpg" 
-                    alt="Trop Doux Recup" 
+                    alt="TropDouxRécup" 
                     className="h-12 w-12 rounded-full object-cover"
                 />
             </div>

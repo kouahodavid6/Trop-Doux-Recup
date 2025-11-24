@@ -12,7 +12,7 @@ const FAQ = () => {
                     Questions <span className="text-[#ff7a00]/80">fréquentes</span>
                 </h2>
                 <p className="text-center text-xl text-gray-400 mb-16 max-w-2xl mx-auto">
-                    Tout ce que vous devez savoir sur Trop Doux Récup
+                    Tout ce que vous devez savoir sur TropDouxRécup
                 </p>
 
                 <div className="max-w-3xl mx-auto space-y-4">

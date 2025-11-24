@@ -46,7 +46,7 @@ const Hero = () => {
                                         <div className="absolute inset-0 bg-[#ff7a00]/80 rounded-2xl blur-lg group-hover:blur-xl transition-all duration-500 opacity-50"></div>
                                         <img 
                                             src="/LogoTropDouxRecup.jpg" 
-                                            alt="Logo Trop Doux Recup"
+                                            alt="Logo TropDouxRécup"
                                             className="relative w-40 h-40 sm:w-48 sm:h-48 rounded-2xl object-cover transform group-hover:scale-105 transition-transform duration-500 shadow-2xl"
                                         />
                                     </div>
@@ -54,7 +54,7 @@ const Hero = () => {
                                     {/* Texte sous le logo */}
                                     <div className="text-center space-y-3">
                                         <h3 className="text-xl sm:text-2xl font-bold text-white">
-                                            Trop Doux Récup
+                                            TropDouxRécup
                                         </h3>
                                         <p className="text-gray-400 text-sm max-w-xs">
                                             Des repas délicieux à petits prix, 
