@@ -60,17 +60,14 @@ const Navbar = () => {
             <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
                 <div className="flex justify-between items-center">
                     {/* Logo */}
-                    <div className="flex-shrink-0">
-                        <button 
+                    <div className="flex items-center gap-2">
+                        <img 
                             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                            className="flex items-center focus:outline-none focus:ring-2 focus:ring-[#ff7a00] focus:ring-opacity-50 rounded-lg transition-all duration-300 hover:scale-105"
-                        >
-                            <img 
-                                src="/LogoTropDouxRecup.jpg" 
-                                alt="Logo TropDouxRécup"
-                                className="w-12 h-12 sm:w-15 sm:h-15 md:w-14 md:h-14 rounded-xl object-cover transition-transform duration-500 shadow-lg"
-                            />
-                        </button>
+                            src="/LogoTropDouxRecup.jpg" 
+                            alt="Logo TropDouxRécup"
+                            className="w-12 h-12 sm:w-15 sm:h-15 md:w-14 md:h-14 rounded-xl object-cover transition-transform duration-500 shadow-lg"
+                        />
+                        <h1 className='text-white font-bold text-xl'>TropDouxRécup</h1>
                     </div>
 
                     {/* Navigation desktop */}
