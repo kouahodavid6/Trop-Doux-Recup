@@ -11,9 +11,9 @@ const ButtonStore = ({
     const baseClasses = "flex items-center justify-center gap-1 px-6 py-3 rounded-full font-bold transition-all duration-300 transform hover:scale-105 w-full sm:w-auto";
     
     const variants = {
-        primary: "bg-[#ffa700] text-black hover:bg-[#ff9500]",
+        primary: "bg-[#ff7a00]/80 text-black hover:bg-[#ff9500]",
         secondary: "bg-gray-800 text-white hover:bg-gray-700",
-        outline: "border-2 border-[#ffa700] text-[#ffa700] hover:bg-[#ffa700] hover:text-white"
+        outline: "border-2 border-[#ff7a00]/80 text-[#ff7a00]/80 hover:bg-[#ff7a00]/80 hover:text-white"
     };
 
     return (

@@ -6,7 +6,7 @@ export const steps = [
         icon: Upload,
         title: 'Restaurants : postez vos invendus',
         description: 'Après le service, publiez vos plats disponibles sur l\'application',
-        color: 'from-[#ffa700] to-[#ff8c00]',
+        color: 'from-[#ff7a00]/80 to-[#ff8c00]',
     },
     {
         icon: ShoppingBag,
@@ -18,7 +18,7 @@ export const steps = [
         icon: Check,
         title: 'Récupération le soir même',
         description: 'Récupérez votre commande, savourez et célébrez le gaspillage évité',
-        color: 'from-[#ff8c00] to-[#ffa700]',
+        color: 'from-[#ff8c00] to-[#ff7a00]/80',
     },
 ];
 
@@ -64,7 +64,7 @@ export const stats = [
         icon: Scale,
         value: '2,500',
         label: 'tonnes de nourriture sauvées',
-        color: 'from-[#ff8c00] to-[#ffa700]',
+        color: 'from-[#ff7a00]/80 to-[#ff7a00]',
     },
     {
         icon: Heart,
@@ -80,7 +80,7 @@ export const testimonials = [
         role: 'Client fidèle',
         text: 'Je commande sur l\'application tous les soirs pour une fraction du prix. C\'est incroyable !',
         rating: 5,
-        bgColor: 'bg-gradient-to-br from-[#ffa700] to-[#ff8c00]',
+        bgColor: 'bg-gradient-to-br from-[#ff7a00]/80 to-[#ff8c00]',
         textColor: 'text-black',
     },
     {
@@ -96,7 +96,7 @@ export const testimonials = [
         role: 'Étudiant',
         text: 'Parfait pour mon budget ! Je découvre de nouveaux restaurants et je contribue à réduire le gaspillage.',
         rating: 5,
-        bgColor: 'bg-gradient-to-br from-[#ff8c00] to-[#ffa700]',
+        bgColor: 'bg-gradient-to-br from-[#ff8c00] to-[#ff7a00]/80',
         textColor: 'text-black',
     },
 ];

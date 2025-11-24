@@ -6,7 +6,7 @@ const Temoignages = () => {
         <section className="py-20 bg-gray-50">
             <div className="container mx-auto px-4">
                 <h2 className="text-4xl md:text-5xl font-black text-center mb-4 text-black">
-                    Ils nous font <span className="text-[#ffa700]">confiance</span>
+                    Ils nous font <span className="text-[#ff7a00]/80">confiance</span>
                 </h2>
                 <p className="text-center text-xl text-gray-600 mb-16 max-w-2xl mx-auto">
                     Découvrez les témoignages de notre communauté
@@ -22,7 +22,7 @@ const Temoignages = () => {
                                 {[...Array(testimonial.rating)].map((_, i) => (
                                     <Star
                                         key={i}
-                                        className={`w-6 h-6 ${testimonial.textColor === 'text-black' ? 'text-black fill-black' : 'text-[#ffa700] fill-[#ffa700]'}`}
+                                        className={`w-6 h-6 ${testimonial.textColor === 'text-black' ? 'text-black fill-black' : 'text-[#ff7a00]/80 fill-[#ff7a00]/80'}`}
                                     />
                                 ))}
                             </div>

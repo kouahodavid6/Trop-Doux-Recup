@@ -13,37 +13,37 @@ const CardRejoindre = ({
   const containerClasses = `
     rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 shadow-xl sm:shadow-2xl transition-all duration-300 transform hover:scale-105
     ${isRestaurant 
-      ? 'bg-gradient-to-br from-black to-gray-900 border-2 sm:border-4 border-[#ffa700] shadow-[#ffa700]/20 sm:shadow-[#ffa700]/30 hover:shadow-[#ffa700]/40' 
-      : 'bg-gradient-to-br from-[#ffa700] to-[#ff8c00] hover:shadow-2xl sm:hover:shadow-3xl'
+      ? 'bg-gradient-to-br from-black to-gray-900 border-2 sm:border-4 border-[#ff7a00]/80 shadow-[#ff7a00]/80/20 sm:shadow-[#ff7a00]/80/30 hover:shadow-[#ff7a00]/80/40' 
+      : 'bg-gradient-to-br from-[#ff7a00]/80 to-[#ff8c00] hover:shadow-2xl sm:hover:shadow-3xl'
     }
   `;
 
   const iconContainerClasses = `
     p-3 sm:p-4 rounded-xl sm:rounded-2xl
-    ${isRestaurant ? 'bg-[#ffa700]' : 'bg-black'}
+    ${isRestaurant ? 'bg-[#ff7a00]/80' : 'bg-black'}
   `;
 
-  const iconColor = isRestaurant ? 'text-black' : 'text-[#ffa700]';
-  const titleColor = isRestaurant ? 'text-[#ffa700]' : 'text-black';
+  const iconColor = isRestaurant ? 'text-black' : 'text-[#ff7a00]/80';
+  const titleColor = isRestaurant ? 'text-[#ff7a00]/80' : 'text-black';
   const textColor = isRestaurant ? 'text-white' : 'text-black';
-  const itemIconColor = isRestaurant ? 'text-[#ffa700]' : 'text-black';
+  const itemIconColor = isRestaurant ? 'text-[#ff7a00]/80' : 'text-black';
 
   const statContainerClasses = `
     rounded-xl sm:rounded-2xl p-4 sm:p-6 mb-6 sm:mb-8
     ${isRestaurant 
-      ? 'bg-[#ffa700]/20 border border-[#ffa700]' 
+      ? 'bg-[#ff7a00]/80/20 border border-[#ff7a00]/80' 
       : 'bg-black'
     }
   `;
 
-  const statValueColor = isRestaurant ? 'text-[#ffa700]' : 'text-[#ffa700]';
+  const statValueColor = isRestaurant ? 'text-[#ff7a00]/80' : 'text-[#ff7a00]/80';
   const statTextColor = isRestaurant ? 'text-white' : 'text-white';
 
   const buttonClasses = `
     w-full py-3 sm:py-4 rounded-full text-lg sm:text-xl font-black transition-all duration-300 transform hover:scale-105
     ${isRestaurant 
-      ? 'bg-[#ffa700] text-black hover:bg-[#ff9500] shadow-lg sm:shadow-xl shadow-[#ffa700]/40' 
-      : 'bg-black text-[#ffa700] hover:bg-gray-900 shadow-lg sm:shadow-xl'
+      ? 'bg-[#ff7a00]/80 text-black hover:bg-[#ff9500] shadow-lg sm:shadow-xl shadow-[#ff7a00]/80/40' 
+      : 'bg-black text-[#ff7a00]/80 hover:bg-gray-900 shadow-lg sm:shadow-xl'
     }
   `;
 

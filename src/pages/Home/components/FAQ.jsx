@@ -9,7 +9,7 @@ const FAQ = () => {
         <section className="py-20 bg-black">
             <div className="container mx-auto px-4">
                 <h2 className="text-4xl md:text-5xl font-black text-center mb-4 text-white">
-                    Questions <span className="text-[#ffa700]">fréquentes</span>
+                    Questions <span className="text-[#ff7a00]/80">fréquentes</span>
                 </h2>
                 <p className="text-center text-xl text-gray-400 mb-16 max-w-2xl mx-auto">
                     Tout ce que vous devez savoir sur Trop Doux Récup
@@ -19,7 +19,7 @@ const FAQ = () => {
                     {faqs.map((faq, index) => (
                         <div
                             key={index}
-                            className="border-2 border-[#ffa700]/30 rounded-2xl overflow-hidden hover:border-[#ffa700] transition-all duration-300"
+                            className="border-2 border-[#ff7a00]/80/30 rounded-2xl overflow-hidden hover:border-[#ff7a00]/80 transition-all duration-300"
                         >
                             <button
                                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
@@ -28,7 +28,7 @@ const FAQ = () => {
                                 <span className="text-xl font-bold text-white pr-8">
                                     {faq.question}
                                 </span>
-                                <div className="flex-shrink-0 bg-[#ffa700] rounded-full p-2">
+                                <div className="flex-shrink-0 bg-[#ff7a00]/80 rounded-full p-2">
                                     {openIndex === index ? (
                                         <Minus className="w-5 h-5 text-black" />
                                     ) : (
@@ -38,7 +38,7 @@ const FAQ = () => {
                             </button>
 
                             {openIndex === index && (
-                                <div className="p-6 bg-gray-900 border-t-2 border-[#ffa700]/30">
+                                <div className="p-6 bg-gray-900 border-t-2 border-[#ff7a00]/80/30">
                                     <p className="text-gray-300 text-lg leading-relaxed">
                                         {faq.answer}
                                     </p>
