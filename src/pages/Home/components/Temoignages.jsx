@@ -3,7 +3,7 @@ import { Star } from "lucide-react";
 
 const Temoignages = () => {
     return (
-        <section className="py-20 bg-gray-50">
+        <section id="temoignages" className="py-20 bg-gray-50">
             <div className="container mx-auto px-4">
                 <h2 className="text-4xl md:text-5xl font-black text-center mb-4 text-black">
                     Ils nous font <span className="text-[#ff7a00]/80">confiance</span>

@@ -1,3 +1,4 @@
+import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Urgence from "./components/Urgence";
 import Fonctionnement from "./components/Fonctionnement";
@@ -10,6 +11,7 @@ import Footer from "./components/Footer";
 const Home = () => {
     return(
         <>
+            <Navbar />
             {/* Animation d'apparition initiale pour Hero */}
             <div data-aos="fade-in" data-aos-duration="1200">
                 <Hero />

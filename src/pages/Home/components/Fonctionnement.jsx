@@ -2,7 +2,7 @@ import { steps } from '../../../data/data';
 
 const Fonctionnement = () => {
     return(
-        <section className='py-20 bg-gray-50'>
+        <section id='fonctionnement' className='py-20 bg-gray-50'>
             <div className="container mx-auto px-4">
                 <h2 className="text-4xl md:text-5xl font-black text-center mb-16 text-black">
                     Comment ça <span className="text-[#ff7a00]/80">fonctionne</span> ?

@@ -2,7 +2,7 @@ import { AlertCircle, CheckCircle } from 'lucide-react';
 
 const Urgence = () => {
     return (
-        <section className="py-10 bg-white">
+        <section id='urgence' className="py-10 bg-white">
             <div className="container mx-auto px-4">
                 <div className="max-w-4xl mx-auto text-center space-y-8">
                     <div className="flex flex-col items-center justify-center gap-4 text-black">

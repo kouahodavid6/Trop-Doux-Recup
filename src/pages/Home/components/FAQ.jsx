@@ -6,7 +6,7 @@ const FAQ = () => {
     const [openIndex, setOpenIndex] = useState(0);
 
     return (
-        <section className="py-20 bg-black">
+        <section id="faq" className="py-20 bg-black">
             <div className="container mx-auto px-4">
                 <h2 className="text-4xl md:text-5xl font-black text-center mb-4 text-white">
                     Questions <span className="text-[#ff7a00]/80">fréquentes</span>

@@ -1,5 +1,14 @@
 import { Upload, ShoppingBag, Check, Store, Users, DollarSign, UserPlus, TrendingDown, Leaf, Clock, Scale, Heart } from 'lucide-react';
 
+export const navItems = [
+    { id: 'urgence', label: 'Urgence' },
+    { id: 'fonctionnement', label: 'Fonctionnement' },
+    { id: 'rejoindres', label: 'Nous Rejoindre' },
+    { id: 'impact', label: 'Impact' },
+    { id: 'temoignages', label: 'Témoignages' },
+    { id: 'faq', label: 'FAQ' }
+];
+
 // Données pour le composant Fonctionnement
 export const steps = [
     {
@@ -125,6 +134,7 @@ export const faqs = [
 ];
 
 export default {
+    navItems,
     steps,
     restaurantData,
     clientData,
