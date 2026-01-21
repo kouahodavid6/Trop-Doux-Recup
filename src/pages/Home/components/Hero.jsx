@@ -2,7 +2,10 @@ import ButtonStore from "../../components/ButtonStore";
 
 const Hero = () => {
     return(
-        <header className="relative bg-black text-white min-h-screen flex items-center overflow-hidden">
+        <header 
+            id="accueil"
+            className="relative bg-black text-white min-h-screen flex items-center overflow-hidden"
+        >
             <div className="absolute inset-0 bg-gradient-to-br from-black via-black to-[#ff7a00]/80/20"></div>
 
             <div className="container mx-auto px-4 py-16 sm:py-20 relative z-10 w-full">

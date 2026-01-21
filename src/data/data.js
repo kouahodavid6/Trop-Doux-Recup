@@ -1,6 +1,7 @@
 import { Upload, ShoppingBag, Check, Store, Users, DollarSign, UserPlus, TrendingDown, Leaf, Clock, Scale, Heart } from 'lucide-react';
 
 export const navItems = [
+    { id: 'accueil', label: 'Accueil' },
     { id: 'urgence', label: 'Enjeux' },
     { id: 'fonctionnement', label: 'Fonctionnement' },
     { id: 'rejoindres', label: 'Nous Rejoindre' },
