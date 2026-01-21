@@ -54,15 +54,15 @@ const Temoignages = () => {
 
         for (let i = 0; i < fullStars; i++) {
             stars.push(
-                <Star key={`full-${i}`} className={`w-6 h-6 ${colorClass} fill-current`} />
+                <Star key={`full-${i}`} className={`w-5 h-5 sm:w-6 sm:h-6 ${colorClass} fill-current`} />
             );
         }
 
         if (hasHalfStar) {
             stars.push(
                 <div key="half" className="relative">
-                    <Star className={`w-6 h-6 text-gray-300`} />
-                    <StarHalf className={`w-6 h-6 ${colorClass} fill-current absolute inset-0`} />
+                    <Star className={`w-5 h-5 sm:w-6 sm:h-6 text-gray-300`} />
+                    <StarHalf className={`w-5 h-5 sm:w-6 sm:h-6 ${colorClass} fill-current absolute inset-0`} />
                 </div>
             );
         }
@@ -70,57 +70,57 @@ const Temoignages = () => {
         const emptyStars = 5 - stars.length - (hasHalfStar ? 1 : 0);
         for (let i = 0; i < emptyStars; i++) {
             stars.push(
-                <Star key={`empty-${i}`} className={`w-6 h-6 text-gray-300`} />
+                <Star key={`empty-${i}`} className={`w-5 h-5 sm:w-6 sm:h-6 text-gray-300`} />
             );
         }
 
-        return <div className="flex gap-1 mb-4">{stars}</div>;
+        return <div className="flex gap-1 mb-3 sm:mb-4">{stars}</div>;
     };
 
     return (
-        <section id="temoignages" className="py-20 bg-gray-50 relative overflow-hidden">
+        <section id="temoignages" className="py-16 sm:py-20 bg-gray-50 relative overflow-hidden">
             <div className="container mx-auto px-4">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                 >
-                    <h2 className="text-4xl md:text-5xl font-black text-center mb-4 text-black">
+                    <h2 className="text-3xl sm:text-4xl md:text-4xl font-black text-center mb-3 text-black">
                         Nos <span className="text-[#ff7a00]/80">clients</span>
                     </h2>
-                    <p className="text-center text-xl text-gray-600 mb-16 max-w-2xl mx-auto">
+                    <p className="text-center text-lg sm:text-xl text-gray-600 mb-12 sm:mb-16 max-w-2xl mx-auto">
                         Découvrez les témoignages de notre communauté sur nos différents plats
                     </p>
                 </motion.div>
 
                 {isLoading ? (
-                    <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <div className="grid md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
                         {[...Array(3)].map((_, index) => (
                             <div
                                 key={index}
-                                className="bg-white p-8 rounded-3xl shadow-lg animate-pulse"
+                                className="bg-white p-6 sm:p-8 rounded-3xl shadow-lg animate-pulse"
                             >
-                                <div className="flex gap-1 mb-6">
+                                <div className="flex gap-1 mb-4 sm:mb-6">
                                     {[...Array(5)].map((_, i) => (
-                                        <div key={i} className="w-6 h-6 bg-gray-200 rounded"></div>
+                                        <div key={i} className="w-5 h-5 sm:w-6 sm:h-6 bg-gray-200 rounded"></div>
                                     ))}
                                 </div>
-                                <div className="space-y-3">
-                                    <div className="h-4 bg-gray-200 rounded"></div>
-                                    <div className="h-4 bg-gray-200 rounded w-5/6"></div>
-                                    <div className="h-4 bg-gray-200 rounded w-4/6"></div>
+                                <div className="space-y-2 sm:space-y-3">
+                                    <div className="h-3 sm:h-4 bg-gray-200 rounded"></div>
+                                    <div className="h-3 sm:h-4 bg-gray-200 rounded w-5/6"></div>
+                                    <div className="h-3 sm:h-4 bg-gray-200 rounded w-4/6"></div>
                                 </div>
                             </div>
                         ))}
                     </div>
                 ) : error ? (
-                    <div className="text-center py-12">
-                        <MessageSquare className="w-12 h-12 text-gray-300 mx-auto mb-4" />
+                    <div className="text-center py-8 sm:py-12">
+                        <MessageSquare className="w-10 h-10 sm:w-12 sm:h-12 text-gray-300 mx-auto mb-3 sm:mb-4" />
                         <p className="text-gray-500">Impossible de charger les témoignages</p>
                     </div>
                 ) : processedAvis.length === 0 ? (
-                    <div className="text-center py-12">
-                        <MessageSquare className="w-12 h-12 text-gray-300 mx-auto mb-4" />
+                    <div className="text-center py-8 sm:py-12">
+                        <MessageSquare className="w-10 h-10 sm:w-12 sm:h-12 text-gray-300 mx-auto mb-3 sm:mb-4" />
                         <p className="text-gray-500">Aucun témoignage pour le moment</p>
                     </div>
                 ) : (
@@ -134,7 +134,7 @@ const Temoignages = () => {
                                     animate={{ opacity: 1, x: 0 }}
                                     exit={{ opacity: 0, x: -100 }}
                                     transition={{ duration: 0.5 }}
-                                    className="grid md:grid-cols-3 gap-8"
+                                    className="grid md:grid-cols-3 gap-6 sm:gap-8"
                                 >
                                     {groupedAvis[currentSlide]?.map((avisItem, index) => {
                                         const colors = cardColors[index % cardColors.length];
@@ -148,40 +148,40 @@ const Temoignages = () => {
                                                 initial={{ opacity: 0, y: 20 }}
                                                 animate={{ opacity: 1, y: 0 }}
                                                 transition={{ delay: index * 0.1 }}
-                                                className={`${colors.bg} ${colors.text} ${colors.border} p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border`}
+                                                className={`${colors.bg} ${colors.text} ${colors.border} p-6 sm:p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border`}
                                             >
                                                 <StarRating 
                                                     rating={avisItem.etoile} 
                                                     colorClass={starColor}
                                                 />
 
-                                                <p className={`text-lg mb-6 leading-relaxed font-medium`}>
+                                                <p className={`text-base sm:text-lg mb-4 sm:mb-6 leading-relaxed font-medium`}>
                                                     "{avisItem.testimonialText}"
                                                 </p>
 
-                                                <div className={`border-t ${colors.text === 'text-black' ? 'border-black/20' : 'border-white/20'} pt-6 flex items-center gap-4`}>
+                                                <div className={`border-t ${colors.text === 'text-black' ? 'border-black/20' : 'border-white/20'} pt-4 sm:pt-6 flex items-center gap-3 sm:gap-4`}>
                                                     {avisItem.client?.image_client ? (
                                                         <img 
                                                             src={avisItem.client.image_client} 
                                                             alt={avisItem.firstName}
-                                                            className="w-12 h-12 rounded-full object-cover border-2 border-white/50"
+                                                            className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover border-2 border-white/50"
                                                         />
                                                     ) : (
-                                                        <div className={`w-12 h-12 rounded-full flex items-center justify-center ${colors.text === 'text-white' ? 'bg-white/20' : 'bg-gray-100'}`}>
-                                                            <span className={`text-lg font-bold ${colors.text === 'text-white' ? 'text-white' : 'text-gray-700'}`}>
+                                                        <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center ${colors.text === 'text-white' ? 'bg-white/20' : 'bg-gray-100'}`}>
+                                                            <span className={`text-base sm:text-lg font-bold ${colors.text === 'text-white' ? 'text-white' : 'text-gray-700'}`}>
                                                                 {avisItem.firstName.charAt(0)}
                                                             </span>
                                                         </div>
                                                     )}
                                                     <div>
-                                                        <p className={`font-black text-xl`}>
+                                                        <p className={`font-black text-lg sm:text-xl`}>
                                                             {avisItem.firstName}
                                                         </p>
-                                                        <p className={`${colors.text === 'text-black' ? 'text-black/70' : 'text-white/70'} font-semibold`}>
+                                                        <p className={`${colors.text === 'text-black' ? 'text-black/70' : 'text-white/70'} font-semibold text-sm sm:text-base`}>
                                                             {avisItem.role}
                                                         </p>
                                                         {avisItem.plat && (
-                                                            <p className="text-sm opacity-75">
+                                                            <p className="text-xs sm:text-sm opacity-75">
                                                                 Avis sur : {avisItem.plat.nom}
                                                             </p>
                                                         )}
@@ -198,24 +198,24 @@ const Temoignages = () => {
                                 <>
                                     <button
                                         onClick={prevSlide}
-                                        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 p-3 rounded-full bg-white shadow-lg hover:shadow-xl transition-all hover:scale-110"
+                                        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-10 sm:-translate-x-12 p-2 sm:p-3 rounded-full bg-white shadow-lg hover:shadow-xl transition-all hover:scale-110"
                                     >
-                                        <ChevronLeft className="w-6 h-6 text-gray-700" />
+                                        <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700" />
                                     </button>
                                     <button
                                         onClick={nextSlide}
-                                        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 p-3 rounded-full bg-white shadow-lg hover:shadow-xl transition-all hover:scale-110"
+                                        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-10 sm:translate-x-12 p-2 sm:p-3 rounded-full bg-white shadow-lg hover:shadow-xl transition-all hover:scale-110"
                                     >
-                                        <ChevronRight className="w-6 h-6 text-gray-700" />
+                                        <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700" />
                                     </button>
 
                                     {/* Indicateurs */}
-                                    <div className="flex justify-center gap-2 mt-8">
+                                    <div className="flex justify-center gap-1.5 sm:gap-2 mt-6 sm:mt-8">
                                         {groupedAvis.map((_, index) => (
                                             <button
                                                 key={index}
                                                 onClick={() => setCurrentSlide(index)}
-                                                className={`w-3 h-3 rounded-full transition-all ${currentSlide === index ? 'bg-[#ff7a00] scale-125' : 'bg-gray-300'}`}
+                                                className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all ${currentSlide === index ? 'bg-[#ff7a00] scale-125' : 'bg-gray-300'}`}
                                             />
                                         ))}
                                     </div>
@@ -225,7 +225,7 @@ const Temoignages = () => {
 
                         {/* Version mobile (scroll horizontal) */}
                         <div className="md:hidden">
-                            <div className="flex overflow-x-auto pb-4 space-x-4 snap-x snap-mandatory scrollbar-hide">
+                            <div className="flex overflow-x-auto pb-4 space-x-3 sm:space-x-4 snap-x snap-mandatory scrollbar-hide">
                                 {processedAvis.map((avisItem, index) => {
                                     const colors = cardColors[index % cardColors.length];
                                     const starColor = colors.text === 'text-white' 
@@ -238,36 +238,36 @@ const Temoignages = () => {
                                             initial={{ opacity: 0, scale: 0.9 }}
                                             animate={{ opacity: 1, scale: 1 }}
                                             transition={{ delay: index * 0.1 }}
-                                            className={`${colors.bg} ${colors.text} ${colors.border} p-6 rounded-3xl shadow-xl min-w-[85vw] snap-center border`}
+                                            className={`${colors.bg} ${colors.text} ${colors.border} p-4 sm:p-6 rounded-3xl shadow-xl min-w-[85vw] sm:min-w-[80vw] snap-center border`}
                                         >
                                             <StarRating 
                                                 rating={avisItem.etoile} 
                                                 colorClass={starColor}
                                             />
 
-                                            <p className={`text-lg mb-6 leading-relaxed font-medium`}>
+                                            <p className={`text-base sm:text-lg mb-4 sm:mb-6 leading-relaxed font-medium`}>
                                                 "{avisItem.testimonialText}"
                                             </p>
 
-                                            <div className={`border-t ${colors.text === 'text-black' ? 'border-black/20' : 'border-white/20'} pt-4 flex items-center gap-4`}>
+                                            <div className={`border-t ${colors.text === 'text-black' ? 'border-black/20' : 'border-white/20'} pt-3 sm:pt-4 flex items-center gap-3`}>
                                                 {avisItem.client?.image_client ? (
                                                     <img 
                                                         src={avisItem.client.image_client} 
                                                         alt={avisItem.firstName}
-                                                        className="w-10 h-10 rounded-full object-cover border-2 border-white/50"
+                                                        className="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover border-2 border-white/50"
                                                     />
                                                 ) : (
-                                                    <div className={`w-10 h-10 rounded-full flex items-center justify-center ${colors.text === 'text-white' ? 'bg-white/20' : 'bg-gray-100'}`}>
-                                                        <span className={`font-bold ${colors.text === 'text-white' ? 'text-white' : 'text-gray-700'}`}>
+                                                    <div className={`w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center ${colors.text === 'text-white' ? 'bg-white/20' : 'bg-gray-100'}`}>
+                                                        <span className={`font-bold text-sm sm:text-base ${colors.text === 'text-white' ? 'text-white' : 'text-gray-700'}`}>
                                                             {avisItem.firstName.charAt(0)}
                                                         </span>
                                                     </div>
                                                 )}
                                                 <div>
-                                                    <p className={`font-black text-lg`}>
+                                                    <p className={`font-black text-base sm:text-lg`}>
                                                         {avisItem.firstName}
                                                     </p>
-                                                    <p className={`${colors.text === 'text-black' ? 'text-black/70' : 'text-white/70'} font-semibold text-sm`}>
+                                                    <p className={`${colors.text === 'text-black' ? 'text-black/70' : 'text-white/70'} font-semibold text-xs sm:text-sm`}>
                                                         {avisItem.role}
                                                     </p>
                                                 </div>
@@ -283,27 +283,27 @@ const Temoignages = () => {
                 {/* Statistiques */}
                 {processedAvis.length > 0 && (
                     <motion.div 
-                        className="mt-16 text-center"
+                        className="mt-12 sm:mt-16 text-center"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.5 }}
                     >
-                        <div className="inline-flex items-center gap-8 bg-white rounded-2xl px-8 py-4 shadow-lg">
+                        <div className="inline-flex items-center gap-6 sm:gap-8 bg-white rounded-2xl px-6 sm:px-8 py-3 sm:py-4 shadow-lg">
                             <div className="text-center">
-                                <div className="text-3xl font-black text-[#ff7a00]">
+                                <div className="text-2xl sm:text-3xl font-black text-[#ff7a00]">
                                     {processedAvis.length}
                                 </div>
-                                <div className="text-gray-600 font-medium">Témoignages</div>
+                                <div className="text-gray-600 text-sm sm:text-base font-medium">Témoignages</div>
                             </div>
-                            <div className="h-12 w-px bg-gray-200"></div>
+                            <div className="h-8 sm:h-12 w-px bg-gray-200"></div>
                             <div className="text-center">
-                                <div className="text-3xl font-black text-[#ff7a00]">
+                                <div className="text-2xl sm:text-3xl font-black text-[#ff7a00]">
                                     {processedAvis.length > 0 
                                         ? (processedAvis.reduce((acc, avis) => acc + avis.etoile, 0) / processedAvis.length).toFixed(1)
                                         : '0.0'
                                     }
                                 </div>
-                                <div className="text-gray-600 font-medium">Moyenne /5</div>
+                                <div className="text-gray-600 text-sm sm:text-base font-medium">Moyenne /5</div>
                             </div>
                         </div>
                     </motion.div>

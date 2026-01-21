@@ -83,33 +83,6 @@ export const stats = [
     },
 ];
 
-export const testimonials = [
-    {
-        name: 'David Kouaho',
-        role: 'Client fidèle',
-        text: 'Je commande sur l\'application tous les soirs pour une fraction du prix. C\'est incroyable !',
-        rating: 5,
-        bgColor: 'bg-gradient-to-br from-[#ff7a00]/80 to-[#ff8c00]',
-        textColor: 'text-black',
-    },
-    {
-        name: 'Judicael Cakpo',
-        role: 'Propriétaire Restaurant Le Jardin',
-        text: 'Nous avons réduit notre gaspillage de 45% tout en générant des revenus supplémentaires. Excellent concept !',
-        rating: 5,
-        bgColor: 'bg-gradient-to-br from-black to-gray-900',
-        textColor: 'text-white',
-    },
-    {
-        name: 'Emmanuel Bamidélé',
-        role: 'Étudiant',
-        text: 'Parfait pour mon budget ! Je découvre de nouveaux restaurants et je contribue à réduire le gaspillage.',
-        rating: 5,
-        bgColor: 'bg-gradient-to-br from-[#ff8c00] to-[#ff7a00]/80',
-        textColor: 'text-black',
-    },
-];
-
 export const faqs = [
     {
         question: 'Comment fonctionne la récupération des repas ?',
@@ -139,6 +112,5 @@ export default {
     restaurantData,
     clientData,
     stats,
-    testimonials,
     faqs
 };

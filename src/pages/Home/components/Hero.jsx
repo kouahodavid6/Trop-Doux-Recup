@@ -5,20 +5,20 @@ const Hero = () => {
         <header className="relative bg-black text-white min-h-screen flex items-center overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-black via-black to-[#ff7a00]/80/20"></div>
 
-            <div className="container mx-auto px-4 py-20 relative z-10 w-full">
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="container mx-auto px-4 py-16 sm:py-20 relative z-10 w-full">
+                <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
                     {/* Partie texte - centrée sur mobile */}
-                    <div className="space-y-8 text-center lg:text-left">
-                        <h1 className="text-4xl md:text-6xl font-black leading-tight">
+                    <div className="space-y-6 sm:space-y-8 text-center lg:text-left">
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-black leading-tight">
                             Stop au gaspillage,{' '}
                             <span className="text-[#ff7a00]/80">bonnes affaires</span> assurées !
                         </h1>
 
-                        <p className="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        <p className="text-lg sm:text-xl md:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                             L'application qui transforme les invendus des restaurants en repas pas chers pour tous
                         </p>
 
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
                             <ButtonStore 
                                 store="App Store"
                                 url="https://apps.apple.com/app/id389801252"
@@ -32,31 +32,31 @@ const Hero = () => {
 
                     {/* Partie téléphone - centrée sur mobile */}
                     <div className="relative flex items-center justify-center">
-                        <div className="relative w-72 sm:w-80 h-[450px] sm:h-[500px] bg-gradient-to-br from-[#ff7a00]/80 to-[#ff8c00] rounded-[3rem] p-3 shadow-2xl shadow-[#ff7a00]/80/50 transform hover:scale-105 transition-transform duration-500 mx-auto">
+                        <div className="relative w-64 sm:w-72 md:w-80 h-[400px] sm:h-[450px] md:h-[500px] bg-gradient-to-br from-[#ff7a00]/80 to-[#ff8c00] rounded-[3rem] p-3 shadow-2xl shadow-[#ff7a00]/80/50 transform hover:scale-105 transition-transform duration-500 mx-auto">
                             <div className="bg-black h-full rounded-[2.5rem] flex flex-col items-center justify-center relative overflow-hidden">
                                 {/* Encoche du téléphone */}
-                                <div className="absolute top-0 left-0 right-0 h-8 bg-black flex items-center justify-center">
-                                    <div className="w-24 h-6 bg-gray-900 rounded-full"></div>
+                                <div className="absolute top-0 left-0 right-0 h-6 sm:h-8 bg-black flex items-center justify-center">
+                                    <div className="w-20 sm:w-24 h-4 sm:h-6 bg-gray-900 rounded-full"></div>
                                 </div>
 
                                 {/* Contenu du téléphone */}
-                                <div className="flex-1 flex flex-col items-center justify-center p-6 sm:p-8 space-y-6 sm:space-y-8">
+                                <div className="flex-1 flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 space-y-4 sm:space-y-6 md:space-y-8">
                                     {/* Logo principal */}
                                     <div className="relative group">
                                         <div className="absolute inset-0 bg-[#ff7a00]/80 rounded-2xl blur-lg group-hover:blur-xl transition-all duration-500 opacity-50"></div>
                                         <img 
                                             src="/LogoTropDouxRecup.jpg" 
                                             alt="Logo TropDouxRécup"
-                                            className="relative w-40 h-40 sm:w-48 sm:h-48 rounded-2xl object-cover transform group-hover:scale-105 transition-transform duration-500 shadow-2xl"
+                                            className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-2xl object-cover transform group-hover:scale-105 transition-transform duration-500 shadow-2xl"
                                         />
                                     </div>
 
                                     {/* Texte sous le logo */}
-                                    <div className="text-center space-y-3">
-                                        <h3 className="text-xl sm:text-2xl font-bold text-white">
+                                    <div className="text-center space-y-2 sm:space-y-3">
+                                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white">
                                             TropDouxRécup
                                         </h3>
-                                        <p className="text-gray-400 text-sm max-w-xs">
+                                        <p className="text-gray-400 text-xs sm:text-sm max-w-xs">
                                             Des repas délicieux à petits prix, 
                                             <span className="text-[#ff7a00]/80 block">zéro gaspillage</span>
                                         </p>
@@ -64,18 +64,18 @@ const Hero = () => {
                                 </div>
 
                                 {/* Barre de navigation basse */}
-                                <div className="absolute bottom-4 left-4 right-4 bg-gray-900/80 rounded-full p-2 backdrop-blur-sm">
+                                <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4 bg-gray-900/80 rounded-full p-1.5 sm:p-2 backdrop-blur-sm">
                                     <div className="flex justify-around items-center">
-                                        <div className="w-2 h-2 bg-[#ff7a00]/80 rounded-full"></div>
-                                        <div className="w-8 h-1 bg-gray-600 rounded-full"></div>
-                                        <div className="w-2 h-2 bg-gray-600 rounded-full"></div>
+                                        <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[#ff7a00]/80 rounded-full"></div>
+                                        <div className="w-6 h-1 sm:w-8 sm:h-1 bg-gray-600 rounded-full"></div>
+                                        <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-gray-600 rounded-full"></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         {/* Effet de lumière d'arrière-plan */}
-                        <div className="absolute -z-10 w-72 h-72 sm:w-96 sm:h-96 bg-[#ff7a00]/80/30 rounded-full blur-3xl"></div>
+                        <div className="absolute -z-10 w-64 h-64 sm:w-72 sm:h-72 md:w-96 md:h-96 bg-[#ff7a00]/80/30 rounded-full blur-3xl"></div>
                     </div>
                 </div>
             </div>
