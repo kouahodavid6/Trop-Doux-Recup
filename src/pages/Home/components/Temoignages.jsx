@@ -86,10 +86,10 @@ const Temoignages = () => {
                     transition={{ duration: 0.6 }}
                 >
                     <h2 className="text-4xl md:text-5xl font-black text-center mb-4 text-black">
-                        Ils nous font <span className="text-[#ff7a00]/80">confiance</span>
+                        Nos <span className="text-[#ff7a00]/80">clients</span>
                     </h2>
                     <p className="text-center text-xl text-gray-600 mb-16 max-w-2xl mx-auto">
-                        Découvrez les témoignages de notre communauté
+                        Découvrez les témoignages de notre communauté sur nos différents plats
                     </p>
                 </motion.div>
 
