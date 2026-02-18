@@ -1,7 +1,7 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
-import Subscription from './pages/Subscription/Subscription';
+import Subscription from './pages/Subcription/Subscription';
 import NotFound from "./components/NotFound";
 import { useEffect } from "react";
 
