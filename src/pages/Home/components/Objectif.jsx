@@ -1,14 +1,14 @@
 import { stats } from "../../../data/data";
 
-const Impact = () => {
+const Objectif = () => {
     return (
-        <section id="impact" className="py-16 sm:py-20 bg-white">
+        <section id="objectif" className="py-16 sm:py-20 bg-white">
             <div className="container mx-auto px-4">
                 <h2 className="text-3xl sm:text-4xl md:text-4xl font-black text-center mb-3 text-black">
-                    Notre <span className="text-[#ff7a00]/80">impact</span>
+                    Notre <span className="text-[#ff7a00]/80">objectif</span>
                 </h2>
                 <p className="text-center text-lg sm:text-xl text-gray-600 mb-12 sm:mb-16 max-w-2xl mx-auto">
-                    Ensemble, nous faisons la différence contre le gaspillage alimentaire
+                    Ensemble, nous allons faire la différence contre le gaspillage alimentaire et nous visons :
                 </p>
 
                 <div className="grid md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
@@ -40,4 +40,4 @@ const Impact = () => {
     );
 }
 
-export default Impact;
+export default Objectif;

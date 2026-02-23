@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <footer className="bg-black text-white py-16 border-t-4 border-[#ff7a00]/80">
             <div className="container mx-auto px-4">
-                <div className="grid md:grid-cols-4 gap-12 mb-12">
+                <div className="grid md:grid-cols-3 gap-12 mb-12">
                     <div>
                         <div className="flex items-center justify-content-center gap-4 mb-4">
                             <img 
@@ -59,7 +59,7 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    <div>
+                    {/* <div>
                         <h4 className="text-lg font-bold text-[#ff7a00]/80 mb-6">
                             Légal
                         </h4>
@@ -85,7 +85,7 @@ const Footer = () => {
                                 </a>
                             </li>
                         </ul>
-                    </div>
+                    </div> */}
 
                     <div>
                         <h4 className="text-lg font-bold text-[#ff7a00]/80 mb-6">
@@ -117,7 +117,7 @@ const Footer = () => {
                                 </span>
                             </p>
                             <p className="text-gray-400 text-center md:text-left">
-                                © 2024 TropDouxRécup. Tous droits réservés.
+                                © 2026 TropDouxRécup. Tous droits réservés.
                             </p>
                         </div>
 

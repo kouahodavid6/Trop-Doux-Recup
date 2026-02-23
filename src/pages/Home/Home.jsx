@@ -3,7 +3,7 @@ import Hero from "./components/Hero";
 import Urgence from "./components/Urgence";
 import Fonctionnement from "./components/Fonctionnement";
 import Rejoindres from "./components/Rejoindres";
-import Impact from "./components/Impact";
+import Objectif from "./components/Objectif";
 import Temoignages from "./components/Temoignages";
 import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
@@ -28,7 +28,7 @@ const Home = () => {
                 <Rejoindres />
             </div>
             <div data-aos="fade-up" data-aos-delay="100">
-                <Impact />
+                <Objectif />
             </div>
             <div data-aos="fade-up" data-aos-delay="100">
                 <Temoignages />

@@ -4,7 +4,7 @@ import { useAvis } from '../../../hooks/useAvis'
 import { motion, AnimatePresence } from "framer-motion";
 
 const Temoignages = () => {
-    const { avis, isLoading, error } = useAvis();
+    const { avis} = useAvis();
     const [currentSlide, setCurrentSlide] = useState(0);
 
     // Couleurs alternées pour les cartes
@@ -77,6 +77,11 @@ const Temoignages = () => {
         return <div className="flex gap-1 mb-3 sm:mb-4">{stars}</div>;
     };
 
+    // Ne rien afficher s'il n'y a pas de témoignages
+    if (processedAvis.length === 0) {
+        return null;
+    }
+
     return (
         <section id="temoignages" className="py-16 sm:py-20 bg-gray-50 relative overflow-hidden">
             <div className="container mx-auto px-4">
@@ -93,140 +98,19 @@ const Temoignages = () => {
                     </p>
                 </motion.div>
 
-                {isLoading ? (
-                    <div className="grid md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
-                        {[...Array(3)].map((_, index) => (
-                            <div
-                                key={index}
-                                className="bg-white p-6 sm:p-8 rounded-3xl shadow-lg animate-pulse"
+                <div className="relative max-w-6xl mx-auto">
+                    {/* Carousel pour desktop, grille pour mobile */}
+                    <div className="hidden md:block">
+                        <AnimatePresence mode="wait">
+                            <motion.div
+                                key={currentSlide}
+                                initial={{ opacity: 0, x: 100 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                exit={{ opacity: 0, x: -100 }}
+                                transition={{ duration: 0.5 }}
+                                className="grid md:grid-cols-3 gap-6 sm:gap-8"
                             >
-                                <div className="flex gap-1 mb-4 sm:mb-6">
-                                    {[...Array(5)].map((_, i) => (
-                                        <div key={i} className="w-5 h-5 sm:w-6 sm:h-6 bg-gray-200 rounded"></div>
-                                    ))}
-                                </div>
-                                <div className="space-y-2 sm:space-y-3">
-                                    <div className="h-3 sm:h-4 bg-gray-200 rounded"></div>
-                                    <div className="h-3 sm:h-4 bg-gray-200 rounded w-5/6"></div>
-                                    <div className="h-3 sm:h-4 bg-gray-200 rounded w-4/6"></div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                ) : error ? (
-                    <div className="text-center py-8 sm:py-12">
-                        <MessageSquare className="w-10 h-10 sm:w-12 sm:h-12 text-gray-300 mx-auto mb-3 sm:mb-4" />
-                        <p className="text-gray-500">Impossible de charger les témoignages</p>
-                    </div>
-                ) : processedAvis.length === 0 ? (
-                    <div className="text-center py-8 sm:py-12">
-                        <MessageSquare className="w-10 h-10 sm:w-12 sm:h-12 text-gray-300 mx-auto mb-3 sm:mb-4" />
-                        <p className="text-gray-500">Aucun témoignage pour le moment</p>
-                    </div>
-                ) : (
-                    <div className="relative max-w-6xl mx-auto">
-                        {/* Carousel pour desktop, grille pour mobile */}
-                        <div className="hidden md:block">
-                            <AnimatePresence mode="wait">
-                                <motion.div
-                                    key={currentSlide}
-                                    initial={{ opacity: 0, x: 100 }}
-                                    animate={{ opacity: 1, x: 0 }}
-                                    exit={{ opacity: 0, x: -100 }}
-                                    transition={{ duration: 0.5 }}
-                                    className="grid md:grid-cols-3 gap-6 sm:gap-8"
-                                >
-                                    {groupedAvis[currentSlide]?.map((avisItem, index) => {
-                                        const colors = cardColors[index % cardColors.length];
-                                        const starColor = colors.text === 'text-white' 
-                                            ? 'text-white' 
-                                            : 'text-[#ff7a00]/80';
-
-                                        return (
-                                            <motion.div
-                                                key={avisItem.id}
-                                                initial={{ opacity: 0, y: 20 }}
-                                                animate={{ opacity: 1, y: 0 }}
-                                                transition={{ delay: index * 0.1 }}
-                                                className={`${colors.bg} ${colors.text} ${colors.border} p-6 sm:p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border`}
-                                            >
-                                                <StarRating 
-                                                    rating={avisItem.etoile} 
-                                                    colorClass={starColor}
-                                                />
-
-                                                <p className={`text-base sm:text-lg mb-4 sm:mb-6 leading-relaxed font-medium`}>
-                                                    "{avisItem.testimonialText}"
-                                                </p>
-
-                                                <div className={`border-t ${colors.text === 'text-black' ? 'border-black/20' : 'border-white/20'} pt-4 sm:pt-6 flex items-center gap-3 sm:gap-4`}>
-                                                    {avisItem.client?.image_client ? (
-                                                        <img 
-                                                            src={avisItem.client.image_client} 
-                                                            alt={avisItem.firstName}
-                                                            className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover border-2 border-white/50"
-                                                        />
-                                                    ) : (
-                                                        <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center ${colors.text === 'text-white' ? 'bg-white/20' : 'bg-gray-100'}`}>
-                                                            <span className={`text-base sm:text-lg font-bold ${colors.text === 'text-white' ? 'text-white' : 'text-gray-700'}`}>
-                                                                {avisItem.firstName.charAt(0)}
-                                                            </span>
-                                                        </div>
-                                                    )}
-                                                    <div>
-                                                        <p className={`font-black text-lg sm:text-xl`}>
-                                                            {avisItem.firstName}
-                                                        </p>
-                                                        <p className={`${colors.text === 'text-black' ? 'text-black/70' : 'text-white/70'} font-semibold text-sm sm:text-base`}>
-                                                            {avisItem.role}
-                                                        </p>
-                                                        {avisItem.plat && (
-                                                            <p className="text-xs sm:text-sm opacity-75">
-                                                                Avis sur : {avisItem.plat.nom}
-                                                            </p>
-                                                        )}
-                                                    </div>
-                                                </div>
-                                            </motion.div>
-                                        );
-                                    })}
-                                </motion.div>
-                            </AnimatePresence>
-
-                            {/* Contrôles du carousel */}
-                            {groupedAvis.length > 1 && (
-                                <>
-                                    <button
-                                        onClick={prevSlide}
-                                        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-10 sm:-translate-x-12 p-2 sm:p-3 rounded-full bg-white shadow-lg hover:shadow-xl transition-all hover:scale-110"
-                                    >
-                                        <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700" />
-                                    </button>
-                                    <button
-                                        onClick={nextSlide}
-                                        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-10 sm:translate-x-12 p-2 sm:p-3 rounded-full bg-white shadow-lg hover:shadow-xl transition-all hover:scale-110"
-                                    >
-                                        <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700" />
-                                    </button>
-
-                                    {/* Indicateurs */}
-                                    <div className="flex justify-center gap-1.5 sm:gap-2 mt-6 sm:mt-8">
-                                        {groupedAvis.map((_, index) => (
-                                            <button
-                                                key={index}
-                                                onClick={() => setCurrentSlide(index)}
-                                                className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all ${currentSlide === index ? 'bg-[#ff7a00] scale-125' : 'bg-gray-300'}`}
-                                            />
-                                        ))}
-                                    </div>
-                                </>
-                            )}
-                        </div>
-
-                        {/* Version mobile (scroll horizontal) */}
-                        <div className="md:hidden">
-                            <div className="flex overflow-x-auto pb-4 space-x-3 sm:space-x-4 snap-x snap-mandatory scrollbar-hide">
-                                {processedAvis.map((avisItem, index) => {
+                                {groupedAvis[currentSlide]?.map((avisItem, index) => {
                                     const colors = cardColors[index % cardColors.length];
                                     const starColor = colors.text === 'text-white' 
                                         ? 'text-white' 
@@ -235,10 +119,10 @@ const Temoignages = () => {
                                     return (
                                         <motion.div
                                             key={avisItem.id}
-                                            initial={{ opacity: 0, scale: 0.9 }}
-                                            animate={{ opacity: 1, scale: 1 }}
+                                            initial={{ opacity: 0, y: 20 }}
+                                            animate={{ opacity: 1, y: 0 }}
                                             transition={{ delay: index * 0.1 }}
-                                            className={`${colors.bg} ${colors.text} ${colors.border} p-4 sm:p-6 rounded-3xl shadow-xl min-w-[85vw] sm:min-w-[80vw] snap-center border`}
+                                            className={`${colors.bg} ${colors.text} ${colors.border} p-6 sm:p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border`}
                                         >
                                             <StarRating 
                                                 rating={avisItem.etoile} 
@@ -249,36 +133,125 @@ const Temoignages = () => {
                                                 "{avisItem.testimonialText}"
                                             </p>
 
-                                            <div className={`border-t ${colors.text === 'text-black' ? 'border-black/20' : 'border-white/20'} pt-3 sm:pt-4 flex items-center gap-3`}>
+                                            <div className={`border-t ${colors.text === 'text-black' ? 'border-black/20' : 'border-white/20'} pt-4 sm:pt-6 flex items-center gap-3 sm:gap-4`}>
                                                 {avisItem.client?.image_client ? (
                                                     <img 
                                                         src={avisItem.client.image_client} 
                                                         alt={avisItem.firstName}
-                                                        className="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover border-2 border-white/50"
+                                                        className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover border-2 border-white/50"
                                                     />
                                                 ) : (
-                                                    <div className={`w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center ${colors.text === 'text-white' ? 'bg-white/20' : 'bg-gray-100'}`}>
-                                                        <span className={`font-bold text-sm sm:text-base ${colors.text === 'text-white' ? 'text-white' : 'text-gray-700'}`}>
+                                                    <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center ${colors.text === 'text-white' ? 'bg-white/20' : 'bg-gray-100'}`}>
+                                                        <span className={`text-base sm:text-lg font-bold ${colors.text === 'text-white' ? 'text-white' : 'text-gray-700'}`}>
                                                             {avisItem.firstName.charAt(0)}
                                                         </span>
                                                     </div>
                                                 )}
                                                 <div>
-                                                    <p className={`font-black text-base sm:text-lg`}>
+                                                    <p className={`font-black text-lg sm:text-xl`}>
                                                         {avisItem.firstName}
                                                     </p>
-                                                    <p className={`${colors.text === 'text-black' ? 'text-black/70' : 'text-white/70'} font-semibold text-xs sm:text-sm`}>
+                                                    <p className={`${colors.text === 'text-black' ? 'text-black/70' : 'text-white/70'} font-semibold text-sm sm:text-base`}>
                                                         {avisItem.role}
                                                     </p>
+                                                    {avisItem.plat && (
+                                                        <p className="text-xs sm:text-sm opacity-75">
+                                                            Avis sur : {avisItem.plat.nom}
+                                                        </p>
+                                                    )}
                                                 </div>
                                             </div>
                                         </motion.div>
                                     );
                                 })}
-                            </div>
+                            </motion.div>
+                        </AnimatePresence>
+
+                        {/* Contrôles du carousel */}
+                        {groupedAvis.length > 1 && (
+                            <>
+                                <button
+                                    onClick={prevSlide}
+                                    className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-10 sm:-translate-x-12 p-2 sm:p-3 rounded-full bg-white shadow-lg hover:shadow-xl transition-all hover:scale-110"
+                                >
+                                    <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700" />
+                                </button>
+                                <button
+                                    onClick={nextSlide}
+                                    className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-10 sm:translate-x-12 p-2 sm:p-3 rounded-full bg-white shadow-lg hover:shadow-xl transition-all hover:scale-110"
+                                >
+                                    <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700" />
+                                </button>
+
+                                {/* Indicateurs */}
+                                <div className="flex justify-center gap-1.5 sm:gap-2 mt-6 sm:mt-8">
+                                    {groupedAvis.map((_, index) => (
+                                        <button
+                                            key={index}
+                                            onClick={() => setCurrentSlide(index)}
+                                            className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all ${currentSlide === index ? 'bg-[#ff7a00] scale-125' : 'bg-gray-300'}`}
+                                        />
+                                    ))}
+                                </div>
+                            </>
+                        )}
+                    </div>
+
+                    {/* Version mobile (scroll horizontal) */}
+                    <div className="md:hidden">
+                        <div className="flex overflow-x-auto pb-4 space-x-3 sm:space-x-4 snap-x snap-mandatory scrollbar-hide">
+                            {processedAvis.map((avisItem, index) => {
+                                const colors = cardColors[index % cardColors.length];
+                                const starColor = colors.text === 'text-white' 
+                                    ? 'text-white' 
+                                    : 'text-[#ff7a00]/80';
+
+                                return (
+                                    <motion.div
+                                        key={avisItem.id}
+                                        initial={{ opacity: 0, scale: 0.9 }}
+                                        animate={{ opacity: 1, scale: 1 }}
+                                        transition={{ delay: index * 0.1 }}
+                                        className={`${colors.bg} ${colors.text} ${colors.border} p-4 sm:p-6 rounded-3xl shadow-xl min-w-[85vw] sm:min-w-[80vw] snap-center border`}
+                                    >
+                                        <StarRating 
+                                            rating={avisItem.etoile} 
+                                            colorClass={starColor}
+                                        />
+
+                                        <p className={`text-base sm:text-lg mb-4 sm:mb-6 leading-relaxed font-medium`}>
+                                            "{avisItem.testimonialText}"
+                                        </p>
+
+                                        <div className={`border-t ${colors.text === 'text-black' ? 'border-black/20' : 'border-white/20'} pt-3 sm:pt-4 flex items-center gap-3`}>
+                                            {avisItem.client?.image_client ? (
+                                                <img 
+                                                    src={avisItem.client.image_client} 
+                                                    alt={avisItem.firstName}
+                                                    className="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover border-2 border-white/50"
+                                                />
+                                            ) : (
+                                                <div className={`w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center ${colors.text === 'text-white' ? 'bg-white/20' : 'bg-gray-100'}`}>
+                                                    <span className={`font-bold text-sm sm:text-base ${colors.text === 'text-white' ? 'text-white' : 'text-gray-700'}`}>
+                                                        {avisItem.firstName.charAt(0)}
+                                                    </span>
+                                                </div>
+                                            )}
+                                            <div>
+                                                <p className={`font-black text-base sm:text-lg`}>
+                                                    {avisItem.firstName}
+                                                </p>
+                                                <p className={`${colors.text === 'text-black' ? 'text-black/70' : 'text-white/70'} font-semibold text-xs sm:text-sm`}>
+                                                    {avisItem.role}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </motion.div>
+                                );
+                            })}
                         </div>
                     </div>
-                )}
+                </div>
 
                 {/* Statistiques */}
                 {processedAvis.length > 0 && (

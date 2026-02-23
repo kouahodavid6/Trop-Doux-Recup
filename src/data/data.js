@@ -1,11 +1,11 @@
-import { Upload, ShoppingBag, Check, Store, Users, DollarSign, UserPlus, TrendingDown, Leaf, Clock, Scale, Heart } from 'lucide-react';
+import { Upload, ShoppingBag, Check, Store, Users, DollarSign, UserPlus, TrendingDown, Leaf, ShoppingBasket, Scale, Heart } from 'lucide-react';
 
 export const navItems = [
     { id: 'accueil', label: 'Accueil' },
     { id: 'urgence', label: 'Enjeux' },
     { id: 'fonctionnement', label: 'Fonctionnement' },
     { id: 'rejoindres', label: 'Nous Rejoindre' },
-    { id: 'impact', label: 'Impact' },
+    { id: 'objectif', label: 'Objectif' },
     { id: 'temoignages', label: 'Témoignages' },
     { id: 'faq', label: 'FAQ' }
 ];
@@ -55,7 +55,7 @@ export const clientData = {
     items: [
         { icon: DollarSign, text: 'Repas qualité restaurant à -60%' },
         { icon: Leaf, text: 'Impact écologique immédiat' },
-        { icon: Clock, text: 'Réservation express' }
+        { icon: ShoppingBasket, text: 'Commande depuis l’application' }
     ],
     statValue: 'Jusqu\'à 40%',
     statText: 'd\'économie par repas',
@@ -87,11 +87,11 @@ export const stats = [
 export const faqs = [
     {
         question: 'Comment fonctionne la récupération des repas ?',
-        answer: 'Après avoir réservé via l\'application, vous recevez un créneau de récupération. Présentez-vous au restaurant avec votre confirmation et récupérez votre repas emballé et prêt à emporter.',
+        answer: 'Après avoir réservé via l\'application, présentez-vous au restaurant avec votre code qr ou votre code de confirmation et récupérez votre repas emballé et prêt à emporter.',
     },
     {
             question: 'Quelle est la réduction moyenne sur les repas ?',
-            answer: 'Les réductions varient généralement entre 50% et 70% du prix initial. Certaines offres peuvent atteindre jusqu\'à 20€ d\'économie par repas selon le restaurant et le type de plat.',
+            answer: 'Les réductions varient généralement entre 20% du prix initial. Cela varie en fonction des offres, des repas, des restaurants et le type de plat.',
     },
     {
         question: 'Les restaurants doivent-ils payer pour s\'inscrire ?',
@@ -99,7 +99,7 @@ export const faqs = [
     },
     {
         question: 'Comment puis-je payer mes commandes ?',
-        answer: 'Le paiement se fait directement dans l\'application via carte bancaire ou Apple Pay/Google Pay. C\'est sécurisé, rapide et sans contact au moment de la récupération.',
+        answer: 'Le paiement se fait directement dans l\'application via les moyens de paiements locaux. C\'est sécurisé, rapide et sans contact au moment de la récupération.',
     },
     {
         question: 'Quels types de plats sont disponibles ?',
