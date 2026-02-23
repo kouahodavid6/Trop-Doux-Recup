@@ -37,23 +37,23 @@ const Footer = () => {
                         </h4>
                         <ul className="space-y-3">
                             <li>
-                                <a href="#" className="text-gray-400 hover:text-[#ff7a00]/80 transition-colors duration-300">
+                                <a href="#accueil" className="text-gray-400 hover:text-[#ff7a00]/80 transition-colors duration-300">
                                     Accueil
                                 </a>
                             </li>
                             <li>
-                                <a href="#" className="text-gray-400 hover:text-[#ff7a00]/80 transition-colors duration-300">
+                                <a href="#fonctionnement" className="text-gray-400 hover:text-[#ff7a00]/80 transition-colors duration-300">
                                     Comment ça marche
                                 </a>
                             </li>
                             <li>
-                                <a href="#" className="text-gray-400 hover:text-[#ff7a00]/80 transition-colors duration-300">
+                                <a href="#rejoindres" className="text-gray-400 hover:text-[#ff7a00]/80 transition-colors duration-300">
                                     Nous rejoindre
                                 </a>
                             </li>
                             <li>
-                                <a href="#" className="text-gray-400 hover:text-[#ff7a00]/80 transition-colors duration-300">
-                                    Impact
+                                <a href="#objectif" className="text-gray-400 hover:text-[#ff7a00]/80 transition-colors duration-300">
+                                    Objectif
                                 </a>
                             </li>
                         </ul>
