@@ -72,7 +72,7 @@ export const stats = [
     },
     {
         icon: Scale,
-        value: '2,500',
+        value: '2,500+',
         label: 'tonnes de nourriture sauvées',
         color: 'from-[#ff7a00]/80 to-[#ff7a00]',
     },
